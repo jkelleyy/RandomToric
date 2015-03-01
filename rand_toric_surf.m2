@@ -5,7 +5,7 @@ loadPackage "NormalToricVarieties"
 {*Note, zip doesn't quite have the right semantics if the lists have different lengths*}
 zip := (l1,l2) -> pack(2,mingle(l1,l2))
 unzip := lst -> (apply(lst,val->val#0),apply(lst,val->val#1))
-circularPairList := lst -> pack(2,drop(append(mingle(lst,lst),lst#0),1))
+circularPairList = lst -> pack(2,drop(append(mingle(lst,lst),lst#0),1))
 seqPairList = n -> circularPairList (toList (0..(n-1)))
 
 quicksort =
