@@ -16,5 +16,5 @@ then (if #scriptCommandLine<5
             for p in seq(pstep,pstep,1.0) do (
                 << (h,p) << " : " << (mean (for i from 1 to count list (
                             surf := randomToricSurface (h,p);
-                            if surf===null then continue else meanSingularity surf))) << endl))
+                            if surf===null then continue else meanSingularity surf))) << endl << flush))
         ))
